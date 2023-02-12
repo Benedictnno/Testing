@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let sequence = [2, 4, 5, 6]
+        sequence.pop()
+        sequence.push(8)
+
+        console.log(sequence);
+
+        let descriptions = {
+            work: "Went to work",
+            "touched tree": "Touched a tree"
+        };
+
+        console.log(descriptions);
+
+        let anObject = {left : 'left', right : 'right'}
+        console.log(anObject.left);
+        delete anObject.left
+        console.log(anObject);
+
+        // console.log(Object.keys({x: 0, y: 0, z: 2}))
+        let object = {x: 'q'}
+      let  objectA = {a: 1, b: 2}
+
+    Object.assign(objectA,object)
+
+    console.log(objectA);
+    </script>
+</body>
+
+</html>

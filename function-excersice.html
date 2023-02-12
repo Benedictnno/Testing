@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // solution 1
+
+        min = (a,b) =>Math.min(a,b)
+        console.log(min(1,2));
+
+
+        // solution 2
+
+        function isEven(single) {
+            if (single % 2) {
+                return true
+            } else{
+                return false
+            }
+            console.log(single);
+        }
+
+        isEven(50)
+
+
+        // solution 3
+       
+                function countBs(s) {
+        var count = 0; 
+        for (var i = 0; i < s.length; i += 1) {
+            if (s.charAt(i) === "B")
+            count += 1;
+        }
+        return count;
+        }
+
+        function countChar(s, c) {
+        var count = 0; 
+        for (var i = 0; i < s.length; i += 1) {
+            if (s.charAt(i) === c)
+            count += 1;
+        }
+        return count;
+        }
+
+        console.log(countBs("BBC"));
+        // → 2
+        console.log(countChar("kakkerlak", "k"));
+
+
+        function remove(array, index) {
+return array.slice(0, index)
+.concat(array.slice(index + 1))
+}
+console.log(remove(["a", "b", "c", "d", "e"],2));
+
+
+let start = 6
+ let end =start.toString().padStart(2, '0')
+
+ 
+
+// console.log(end);
+
+    function multiplier(factor) {
+        return number => number * factor;
+    }
+    let twice = multiplier(2);
+    console.log(twice(5))
+
+    function min(a,b) {
+        let ave = Math.min(a,b)
+        return ave
+    }
+    
+    </script>
+</body>
+</html>

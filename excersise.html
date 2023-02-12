@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // first excersise
+        let n = 0
+        let store = []
+
+
+
+        let size = 8
+        let grid = ''
+
+        for (var i = 1; i <= size; i++) {
+            for (var j = 1; j <= size; j++) {
+                if (i % 2 === 0) {
+                    grid += '# '
+                } else {
+                    grid += ' #'
+                }
+            }
+            grid = '\n'
+        }
+
+        console.log(grid)
+        // End
+
+        // secound excersise
+
+        const power = function (base, exponent) {
+            let result = 1;
+            for (let count = 0; count < exponent; count++) {
+                result *= base;
+            }
+            return result;
+        };
+        console.log(power(2, 10))
+
+        // End
+
+
+        // Third excersise
+        const hummus = function (factor) {
+            const ingredient = function (amount, unit, name) {
+                let ingredientAmount = amount * factor;
+                if (ingredientAmount > 1) {
+                    unit += "s";
+                }
+                console.log(`${ingredientAmount} ${unit} ${name}`);
+            };
+            ingredient(1, "can", "chickpeas");
+            ingredient(0.25, "cup", "tahini");
+            ingredient(0.25, "cup", "lemon juice");
+            ingredient(1, "clove", "garlic");
+            ingredient(2, "tablespoon", "olive oil");
+            ingredient(0.5, "teaspoon", "cumin");
+        };
+
+        hummus(1)
+
+
+        // function chicken() {
+        //     return egg();
+        // }
+        // function egg() {
+        //     return chicken();
+        // }
+        // console.log(chicken() + " came first.");
+        function pas(base,exponent) {
+           if (exponent == 0) {
+            return 1;
+        }else {
+            return base * pas(base, exponent - 1)
+        }
+    }
+
+    console.log(pas(2,5));
+    
+    </script>
+</body>
+
+</html>

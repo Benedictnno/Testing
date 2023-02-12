@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //         let theNumber = Number(prompt("Pick a number"));
+        // if (!Number.isNaN(theNumber)) {
+        // console.log("Your number is the square root of " +
+        // theNumber * theNumber);}
+        //     else {
+        //         console.log(`${theNumber} is not a number 
+        // please input a number`);
+        //     }
+
+        // let num = Number(prompt('Hey enter a Number'))
+
+        // if (num < 10) {
+        //     console.log('Input a Number');
+
+        // } else if (num >= 10){
+        //     console.log('nice');
+        // }
+
+        // document.write('hello world')
+
+        // let num2 = 0
+
+        // while (num2 <= 25) {
+        //     console.log(num2); 
+        //     num2++;
+
+        // }
+
+        // let num = 1
+        // let counter = 0
+
+        // while (counter < 10) {
+        //     counter = counter + 1
+        //     num = num * 2
+        // }
+
+        // console.log(num);
+
+        // let yourName;
+        // do {
+        //     yourName = prompt("Who are you?");
+        // } while (!yourName);
+
+        // console.log(`Welcome ${yourName}`);
+
+        // if (yourName != NaN) {
+        //     console.log('input ur name');
+        // }
+
+        // for (let num = 0; num <= 12; num = num + 2) {
+        //     console.log(num);
+
+        // }
+
+        // let result = 1
+        // for (let counter = 0; counter < 10; counter++) {
+        //     result = result * 2
+        //     console.log(result);
+        // }
+
+        // for (let current = 20; ; current = current + 1) {
+        //     if (current % 7 == 21) {
+        //         console.log(current);
+        //         break;
+        //     }
+        // }
+
+        // for (let number = 0; number <= 12; number -= 2) {
+        //     console.log(number);
+        //     if (number == 100 ) {
+        //         break;
+        //     }
+        // }
+
+        function multiplier(factor) {
+return number => number * factor;
+}
+let twice = multiplier(2);
+console.log(twice(5));
+
+
+function wrapValue(n) {
+let local = n;
+return () => local;
+}
+
+let wrap1 = wrapValue(1);
+let wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+
+
+function findSolution(target) {
+function find(current, history) {
+if (current == target) {
+return history;
+} else if (current > target) {
+return null;
+} else {
+return find(current + 5, `(${history} + 5)`) ||
+find(current * 3, `(${history} * 3)`);
+}
+}
+return find(1, 1);
+}
+console.log(findSolution(24));
+// → (((1 * 3) + 5) * 3)
+
+
+
+
+function farm(num, labels){
+    number = String(num)
+    while (number.length < 3){
+        number = '0' + number
+    }
+    console.log(`${number} ${labels}`);
+}
+function products(cows, chicken, pigs) {
+    farm(cows,'cows')
+    farm(chicken,'Chickens')
+    farm(pigs,'pigs')
+}
+
+products(24,6,6)
+
+    </script>
+</body>
+
+</html>
